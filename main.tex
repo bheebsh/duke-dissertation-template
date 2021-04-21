@@ -59,9 +59,16 @@ Modo tiela us cii, ne ehe intere rilativo. Ferio multiplikite id ajn. Tiele neni
 %the \tableofcontents is used
 \tableofcontents
 
+% Finagling with spacing and parskip necessary to meet grad school
+% requirements: table and figure titles must be single-spaced within
+% entries and double-spaced between
+\singlespacing
+\setlength{\parskip}{\baselineskip}
 \listoffigures
 
 \listoftables
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+\normalspacing
 
 %-----------------------------------------------------------------------------%
 % replace FILE in \input{FILE} with name of tex file
