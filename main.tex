@@ -9,13 +9,14 @@
 \usepackage[english]{babel}
 \usepackage{amsfonts}
 \usepackage{natbib}
-\usepackage[margin=1.0in]{geometry}
+\usepackage[left=1.5in, top=1in, right=1in, bottom=1in, includefoot]{geometry}
 \usepackage{setspace}
 \usepackage{bbm}
 \usepackage{calc}
+\usepackage{setspace} % for linespread (double spacing)
 
-\input{helper-macros.tex} 
-% This is where the shortened versions of Latex environments like figure, equation, etc 
+\input{helper-macros.tex}
+% This is where the shortened versions of Latex environments like figure, equation, etc
 % are defined. See the file for the shortcuts.
 
 \author{??AUTHOR??}
@@ -41,6 +42,8 @@
 
 \Copyright
 
+\doublespacing
+
 \abstract
 This is a template for theses and dissertations at Duke University. It is not intended to demonstrate all the features of \LaTeX, only to provide help with the format of your work. There are numerous very good online references for detailed help with \LaTeX, including a downloadable, fairly exhaustive guide at\\
 ftp://ftp.giss.nasa.gov/pub/sgreen/latex/latex.tar.gz.
@@ -56,9 +59,16 @@ Modo tiela us cii, ne ehe intere rilativo. Ferio multiplikite id ajn. Tiele neni
 %the \tableofcontents is used
 \tableofcontents
 
+% Finagling with spacing and parskip necessary to meet grad school
+% requirements: table and figure titles must be single-spaced within
+% entries and double-spaced between
+\singlespacing
+\setlength{\parskip}{\baselineskip}
 \listoffigures
 
 \listoftables
+\setlength{\parskip}{2pt plus 1pt minus 1pt}
+\normalspacing
 
 %-----------------------------------------------------------------------------%
 % replace FILE in \input{FILE} with name of tex file
@@ -78,6 +88,9 @@ Modo tiela us cii, ne ehe intere rilativo. Ferio multiplikite id ajn. Tiele neni
 \chapter{Second Chapter}
 
 \nocite{*}
+\singlespacing
+\setlength{\parskip}{2\baselineskip}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{alpha}
 \bibliography{lit}
 
